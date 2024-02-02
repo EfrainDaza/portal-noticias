@@ -3,9 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- hoja de estilo-->
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- hoja de fuentes-->
+    <link rel="stylesheet" href="./assets/fonts/montserrat/montserrat.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
+
     <title>Noticias de VideosJuegos</title>
 </head>
 <body>
-    
+
+    <!-- BARRA SUPERIOR DECORATIVA -->
+
+    <div class="decoration-bar"></div>
+
+    <!-- ESTRUCTURA PRINCIPAL -->
+
+    <div class="layout">
+
+        <!-- cabecera -->
+        <header class="layout__header">
+            <div class="header__title">
+                <a href="#" class="header__link">
+                    <img src="./assets/img/logo1.png" alt="imagen de logo" class="header__img">
+                </a>
+            </div>
+        </header>
+
+        <!-- navegacion navbar-->
+
+        <div class="layout__nav">
+            <nav class="nav__navbar">
+                <ul class="navbar__list">
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__lnik">NOTICIAS</a>
+
+                        <div class="navbar__submenu">
+                            <!--lista Desplegable -->
+                            <ul class="navbar__sublist">
+                                <li class="sublist__item">
+                                    <a href="#" class="sublist__link">Videos Juegos</a>
+                                </li>
+                                <li class="sublist__item">
+                                    <a href="#" class="sublist__link">Novedades</a>
+                                </li>
+                                <li class="sublist__item">
+                                    <a href="#" class="sublist__link">Otros</a>
+                                        <!-- ultimo menu desplegable -->
+                                        <ul class="sublist__dropdown">
+                                            <li class="droopdown__item">
+                                                <a href="#" class="dropdown__link">Cine</a>
+                                            </li>
+                                            <li class="droopdown__item">
+                                                <a href="#" class="dropdown__link">Tecnologia</a>
+                                            </li>
+                                        </ul>
+
+                                </li>
+                            </ul>
+
+                            <!-- carrusel imagen-->
+                            <div class="submenu__carousel">
+                                <ul class="corousel__menu carousel__menu--small">
+                                    <!-- elemento del carousel-->
+                                    <li class="corousel__item">
+                                        <!-- imagen -->
+                                        <img src="./assets/img/game-1.jpg" alt="imagen carousel" class="carousel__img">
+                                        <!-- puntuacion -->
+                                        <div class="carousel__container-rating">
+                                            <div class="container-rating__circle">
+                                                <div class="container-rating__border">
+                                                    <span class="container-rating__mark">9</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- titulo -->
+                                        <div class="carousel__detail">
+                                            <h3 class="carousel__title">
+                                                <a href="#" class="carousel__link">¿Battlefield 2042 es el mejor de saga?</a>
+                                            </h3>
+                                        </div>
+                                    </li>
+                                    <!-- elemento del carousel-->
+                                    <li class="corousel__item">
+                                        <!-- imagen -->
+                                        <img src="./assets/img/game-2.webp" alt="imagen carousel" class="carousel__img">
+                                       
+                                        <!-- titulo -->
+                                        <div class="carousel__detail">
+                                            <h3 class="carousel__title">
+                                                <a href="#" class="carousel__link">¿Elden  Ring es el mejor juego del año?</a>
+                                            </h3>
+                                        </div>
+                                    </li>
+                                    <!-- elemento del carousel-->
+                                    <li class="corousel__item">
+                                        <!-- imagen -->
+                                        <img src="./assets/img/game-3.jpg" alt="imagen carousel" class="carousel__img">
+                                        
+                                        <!-- titulo -->
+                                        <div class="carousel__detail">
+                                            <h3 class="carousel__title">
+                                                <a href="#" class="carousel__link">¿The Last of us 1 es mejor que el original?</a>
+                                            </h3>
+                                        </div>
+                                    </li>
+                                    <!-- elemento del carousel-->
+                                    <li class="corousel__item">
+                                        <!-- imagen -->
+                                        <img src="./assets/img/game-4.jpg" alt="imagen carousel" class="carousel__img">
+                                        
+                                        <!-- titulo -->
+                                        <div class="carousel__detail">
+                                            <h3 class="carousel__title">
+                                                <a href="#" class="carousel__link">Review de Dyling Lingth 2</a>
+                                            </h3>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__lnik">ANALISIS</a>
+                        <div class="navbar__submenu">
+                                <div class="submenu__carousel">
+                                    <ul class="carousel__menu">
+                                        <!-- elemento de carousel-->
+                                        <li class="carousel__item">
+                                            <!-- imagen -->
+                                            <img src="./assets/img/game-5-1.jpg" alt="imagen carousel" class="carousel__img">
+                                            <!-- titulo -->
+                                            <div class="carousel__detail">
+                                                <h3 class="carousel__title">
+                                                    <a href="#" class="carousel__link">Sifu es el juego de pelea mas dificil</a>
+                                                </h3>
+                                            </div>
+                                            <!-- puntuacion -->
+                                            <div class="carousel__container-rating">
+                                                <div class="container-rating__circle">
+                                                    <div class="container-rating__border">
+                                                        <span class="container-rating__mark">7.5</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                        </div>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__lnik">JUEGOS</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__lnik">CATEGORIAS</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__lnik">RANKING</a>
+                    </li>
+                </ul>
+
+                <form class="navbar__seach"></form> 
+            </nav>
+        </div>
+
+    </div>
+
+    <!-- PIE DE PAGINA -->
+
+    <footer class="footer"></footer>
+
 </body>
 </html>
