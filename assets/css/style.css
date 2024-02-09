@@ -1,0 +1,89 @@
+/* VARIABLES */
+:root{
+    --color-principal:#fff;
+    --color-secundary:#329153;
+
+}
+
+/* ESTILOS GENERALES */
+html{
+    font-size: 10px;
+}
+body{
+    width: 100%;
+    height: 100%;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+    background-color: var(--color-principal);
+}
+
+/* BARRA DECORATIVA */
+.decoration-bar{
+    width: 100%;
+    min-height: 2.5rem;
+    background-color: var(--color-secundary);
+}
+
+/* ESTRUCTURA Y LAYOUT */
+.layout{
+    display: grid;
+    grid-template-areas: /* definimos la estructura de la maquetacion de HTML-vista*/
+    "header header"
+    "nav nav"
+    "marquee marquee"
+    "slider slider"
+    "high high"
+    "videos videos"
+    "carousel carousel"
+    "main aside"
+    ;
+    grid-template-columns: 70% 30%;
+    width: 55vw;
+    min-width: 100rem;
+    margin: 0 auto;
+}
+
+/* ESTILOS HEADER */
+.layout__header{
+    grid-area: header;
+}
+
+/* ESTILOS NAVEGACION NAV */
+.layout__nav{
+    grid-area: nav;
+}
+
+/* ESTILOS MARQUEE MARQUESINA */
+.layout__marquee{
+    grid-area: marquee;
+}
+
+/* ESTILOS SLIDER */
+.layout__slider{
+    grid-area: slider;
+}
+
+/* ESTILOS MEJORES MOMENTOS */
+.layout__highligths{
+    grid-area: high;
+}
+
+/* ESTILOS VIDEOS */
+.layout__videos{
+    grid-area: videos;
+}
+
+/* ESTILOS CARRUOSEL*/
+.layout__carousel-games{
+    grid-area: carousel;
+}
+
+/* ESTILOS CONTENIDO PRINCIPAL MAIN*/
+.layout__main{
+    grid-area: main;
+}
+
+/* ESTILOS BARRA LATERAL PRINCIPAL ASIDE*/
+.layout__aside{
+    grid-area: aside;
+}
