@@ -3,6 +3,12 @@
     --color-principal:#fff;
     --color-secundary:#329153;
     --color-bg-navabr:#333946;
+    --color-border-list: rgba(255,255,255, 0.3);
+    --color-hover-sublist-item: rgba(0,0,0, 0.2);
+    --color-shadow: rgba(0,0,0, 0.10);
+    --color-bg-marquee: #EEEEEE;
+    --color-text-marquee: #7c7c7c;
+
 }
 
 /* ESTILOS GENERALES */
@@ -141,9 +147,212 @@ body{
     visibility: visible;
     transition: all 300ms ease-in-out;
 }
+.navbar__item:hover .submenu__carousel{
+    display: block;
+}
+.navbar__submenu{
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9;
+    overflow: hidden;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    background-color: var(--color-secundary);
+    display: flex;
+    flex-direction: row;
+}
+.navbar__submenu--small{
+    left: auto;
+    width: 20%;
+    overflow: visible;
+}
+.navbar__submenu--small > .navbar__sublist{
+    width: 100%;
+}
+.navbar__sublist{
+    display: inline-block;
+    padding: 1rem;
+    width: 26%;
+}
+.sublist__item{
+    padding: 0.1rem 0;
+    position: relative;
+    border-bottom: 1px solid var(--color-border-list);
+}
+.sublist__item:hover{
+    background-color: var(--color-hover-sublist-item);
+}
+.sublist__item:last-child{
+    border: none;
+}
+.sublist__link{
+    color: var(--color-principal);
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+.sublist__dropdown{
+    position: absolute;
+    left: 100%;
+    top: 0;
+    padding: 1rem;
+    width: 21rem;
+    background-color: var(--color-principal);
+    box-shadow: 2px 0px 2px -1px var(--color-shadow);
+
+    visibility: hidden;
+    opacity: 0;
+    z-index: 9;
+}
+.sublist__item:hover .sublist__dropdown{
+    opacity: 1;
+    visibility: visible;
+    transition: all 300ms ease-in-out; 
+}
+.dropdown__item{
+    border-bottom: 1px solid var(--color-hover-sublist-item);
+}
+.dropdown__item:hover{
+    background-color: var(--color-hover-sublist-item);
+}
+.dropdown__item:last-child{/*revisar efecto*/
+    border: none;
+}
+.dropdown__link{
+    color: var(--color-bg-navabr);
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+/*estilos caroseles submen*/
+.carousel__menu{
+    display: flex;
+    flex-direction: row;
+}
+.carousel__item{
+    flex-basis: 25%;
+    position: relative;
+}
+.carousel__menu--small > .carousel__item{
+    flex-basis: 25%;
+}
+.carousel__container-img{
+    position: relative;
+    width: calc(100% + 3.5rem);
+    height: 35rem;
+    overflow: hidden;
+}
+.carousel__img{
+    width: auto;
+    height: 100%;
+}
+ /* puntuacion de carousel*/
+.carousel__container-rating{
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4.8rem;
+    height: 4.8rem;
+}
+.container-rating__circle{
+    width: 100%;
+    height: 100%;
+    border-radius: 3.2rem;
+    background-color: var(--color-secundary);
+    padding: 0.2rem;
+}
+.container-rating__border{
+    width: 100%;
+    height: 100%;
+    border-radius: 3.2rem;
+    border: 2px solid var(--color-principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-rating__mark{
+    font-weight: 700;
+    color: var(--color-principal);
+}
+ /*titulo de la img de carousel*/
+.carousel__detail{
+    position: absolute;
+    top:1.5rem;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    text-align: center;
+}
+.carousel__link{
+    color: var(--color-principal);
+    background-color: var(--color-shadow);
+    font-size: 1.8rem;
+    text-shadow: 1px 1px 3px black;
+    transition: all 300ms ease;
+}
+.carousel__title:hover > .carousel__link {
+    background-color: var(--color-secundary);
+}
+
 /* ESTILOS MARQUEE MARQUESINA */
 .layout__marquee{
     grid-area: marquee;
+
+    width: 100%;
+    height: 3.5rem;
+    min-height: 3.5rem;
+    padding: 0.5rem;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    background-color: var(--color-bg-marquee);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.marquee__container{
+    display: flex;
+    overflow: hidden;
+}
+.marquee__header{
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--color-principal);
+    background-color: var(--color-secundary);
+    padding: 0.5rem;
+    margin-right: 1rem;
+    position: relative;
+    z-index: 5;
+}
+.marquee__list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10rem;
+}
+.marquee__item:first-child{
+    margin-left: 10rem;
+}
+.marquee__title{
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-style: normal;
+    white-space: nowrap;
+}
+.marquee__link{
+    color: var(--color-text-marquee);
 }
 
 /* ESTILOS SLIDER */
