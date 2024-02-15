@@ -9,6 +9,7 @@
     --color-bg-marquee: #EEEEEE;
     --color-text-marquee: #7c7c7c;
     --color-title: #333333;
+    --color-bg-aside: #f5f5f5;
 
 }
 
@@ -273,21 +274,24 @@ body{
     background-color: var(--color-secundary);
     padding: 0.2rem;
 }
-.container-rating__border,
-.rating__border{
-    width: 100%;
-    height: 100%;
-    border-radius: 3.2rem;
-    border: 2px solid var(--color-principal);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.container-rating__mark,
-.rating__mark{
-    font-weight: 700;
-    color: var(--color-principal);
-}
+    /* reutlizamos recursos de otra seccion*/
+    .container-rating__border,
+    .rating__border,
+    .circle__border{
+        width: 100%;
+        height: 100%;
+        border-radius: 3.2rem;
+        border: 2px solid var(--color-principal);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container-rating__mark,
+    .rating__mark,
+    .circle__mark{
+        font-weight: 700;
+        color: var(--color-principal);
+    }
  /*titulo de la img de carousel*/
 .carousel__detail{
     position: absolute;
@@ -449,107 +453,172 @@ body{
 
     margin-bottom: 3rem;
 }
-.highlights__posts{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 3rem;
+    /*reutilizacion de recursos*/
+    .highlights__posts,
+    .posts__container{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+    }
+    .highlights__post,
+    .posts__post{
+        flex-basis: 33%;
+        height: 100%;
+        border-bottom: 1px solid var(--color-bg-marquee);
+    }
+    .highlights__image,
+    .post__container-image{
+        position: relative;
+        overflow: hidden;
+    }
+    .highlights__img,
+    .post__img{
+        transition: all 300ms ease-in-out;
+    }
+    .highlights__img:hover,
+    .post__img:hover{
+        transform: scale(1.1);
+    }
+    /*reutilizacion de recursos*/
+    .highlights__category,
+    .game__container-category,
+    .post__container-category{
+        position: absolute;
+        left: 0;
+        bottom: 1rem;
+        padding: 0.5rem 1rem;
+        text-align: center;
+        background-color: var(--color-secundary);
+        transition: all 300ms ease-in-out;
+    }
+    .highlights__category:hover,
+    .game__container-category:hover,
+    .post__container-category:hover{
+        background-color: var(--color-bg-navabr);
+    }
+    .highlights__name-category,
+    .game__category,
+    .post__category{
+        display: block;
+        font-weight: 400;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        color: var(--color-principal);
+    }
+    .highlights__title,
+    .post__title{
+        font-size: 1.9rem;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+    .highlights__link,
+    .post__link{
+        color: var(--color-title);
+        transition: all 300ms ease-in-out;
+    }
+    .highlights__title:hover > .highlights__link,
+    .post__title:hover .post__link{
+        color: var(--color-secundary);
+    }
+    .highlights__meta,
+    .post__meta{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 1rem 0;
+    }
+    /* reutilizamos recurso con otras secciones*/
+    .highlights__author,
+    .main-video__author,
+    .video__author,
+    .main-post__author,
+    .news__author,
+    .post__author{
+        font-weight: 500;
+        color: var(--color-secundary);
+        font-size: 1.1rem;
+        text-transform: uppercase;
+    }
+    /* reutilizamos recursos con otras secciones*/
+    .highlights__date,
+    .main-video__date,
+    .video__date,
+    .main-post__date,
+    .news__date,
+    .post__date{
+        font-weight: 400;
+        color: var(--color-text-marquee);
+        font-size: 1.1rem;
+        line-height: 1.5;
+        text-transform: uppercase;
+    }
+    .highlights__description,
+    .post__decription{
+        font-weight: 500;
+        color: var(--color-title);
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        text-align: justify;
+    }
+    /* reutilizacion de recursos*/
+    .highlights__footer-post,
+    .footer-post__container,
+    .footer-info__container,
+    .post__footer-post{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+    .footer-post__container,
+    .footer-info__container,
+    .footer-post__container{
+        gap: 1rem ;
+    }
+    /* reutilizamos recursos con otras secciones*/
+    .footer-post__views,
+    .footer-post__comments,
+    .main-video__views,
+    .main-video__comments,
+    .main-post__views,
+    .main-post__comments{
+        font-weight: 400;
+        display: inline-block;
+        font-size: 1.1rem;
+        color: var(--color-text-marquee);
+    }
+    .footer-post__views > .fa-solid,
+    .footer-post__comments > .fa-solid
+    .main-video__views > .fa-solid,
+    .main-video__comments > .fa-solid,
+    .main-post__views > .fa-solid,
+    .main-post__comments > .fa-solid{
+        margin-right: 0.2rem;
+        font-size: 1.2rem;
+    }
+.footer-post__comments > a{
+    display: inline;
 }
-.highlights__post{
-    flex-basis: 33%;
-    height: 100%;
-    border-bottom: 1px solid var(--color-bg-marquee);
-}
-.highlights__image{
-    position: relative;
-    overflow: hidden;
-}
-.highlights__img{
-    transition: all 300ms ease-in-out;
-}
-.highlights__img:hover{
-    transform: scale(1.1);
-}
-.highlights__category{
-    position: absolute;
-    left: 0;
-    bottom: 1rem;
-    padding: 0.5rem 1rem;
-    text-align: center;
-    background-color: var(--color-secundary);
-    transition: all 300ms ease-in-out;
-}
-.highlights__category:hover{
-    background-color: var(--color-bg-navabr);
-}
-.highlights__name-category{
-    display: block;
-    font-weight: 400;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    color: var(--color-principal);
-}
-.highlights__title{
-    font-size: 1.9rem;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-}
-.highlights__link{
-    color: var(--color-title);
-    transition: all 300ms ease-in-out;
-}
-.highlights__title:hover > .highlights__link{
-    color: var(--color-secundary);
-}
-.highlights__meta{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 1rem 0;
-}
-.highlights__author{
-    font-weight: 500;
-    color: var(--color-secundary);
-    font-size: 1.1rem;
-    text-transform: uppercase;
-}
-.highlights__date{
-    font-weight: 400;
-    color: var(--color-text-marquee);
-    font-size: 1.1rem;
-    line-height: 1.5;
-    text-transform: uppercase;
-}
-.highlights__description{
-    font-weight: 500;
-    color: var(--color-title);
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-    text-align: justify;
-}
-.highlights__footer-post,
-.footer-post__container{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-}
-.footer-post__container{
-    flex-basis: 22%;
-}
-.footer-post__views,
-.footer-post__comments{
-    font-weight: 400;
-    display: inline-block;
-    font-size: 1.1rem;
-    color: var(--color-text-marquee);
-}
-.footer-post__views > .fa-solid,
-.footer-post__comments > .fa-solid{
-    margin-right: 0.2rem;
-    font-size: 1.2rem;
-}
+    /* reutilizacion de recursos*/
+    .footer-post__read-more,
+    .main-post__read-more,
+    .post__read-more{
+        color: var(--color-text-marqueemarquee);
+        border: 1px solid var(--color-text-marquee);
+        font-weight: 500;
+        font-size: 1.1rem;
+        padding: 0.4rem;
+        text-transform: capitalize;
+        margin-bottom: 2rem;
+    }
+    .footer-post__read-more:hover,
+    .main-post__read-more:hover,
+    .post__read-more:hover{
+        border: 1px solid var(--color-secundary);
+        color: var(--color-secundary);
+    }
 
   /* estilos sub encabezados*/
   .news__subheader,
@@ -565,7 +634,7 @@ body{
     margin-bottom: 3rem;
     background-color: var(--color-bg-navabr);
     padding: 0.5rem;
-  }
+    }
     .subheader__title,
     .news__title,
     .list-header__title,
@@ -583,19 +652,414 @@ body{
 /* ESTILOS VIDEOS */
 .layout__videos{
     grid-area: videos;
+    width: 100%;
+}
+.videos__container{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+    /* caja izquierda - video de youtube*/
+.videos__main-video{
+    flex-basis: 65%;
+    padding-bottom: 3rem;
+}
+.main-video__yt-video{
+    width: 100%;
+    height: 40rem;
+    margin-bottom: 3rem;
+}
+.main-video__yt-video > iframe{
+    width: 100%;
+    height: 100%;
+}
+.main-video__title{
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+}
+.main-video__info{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--color-bg-marquee);
+}
+.mainvideo__info-container{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.mainvideo__info-container a{
+    display: inline;
+}
+    /* caja derecha - lista de videos*/
+.videos__list{
+    flex-basis: 35%;
+}
+.videos__video{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--color-bg-marquee);
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.video__detail{
+    flex-basis: 75%;
+}
+.video__title{
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.video__link{
+    color: var(--color-title);
+    transition: all 300ms ease-in-out;
+}
+.video__title:hover > .video__link{
+    color: var(--color-secundary);
+}
+.video__info{
+    display: flex;
+    gap: 1rem;
+}
+.video__image{
+    overflow: hidden;
+}
+.video__img{
+    transition: all 300ms ease-in-out;
+}
+.video__image:hover .video__img{
+    transform: scale(1.1);
 }
 
 /* ESTILOS CARRUOSEL*/
 .layout__carousel-games{
     grid-area: carousel;
+    width: 100%;
+    padding: 3rem;
+    margin-bottom: 6rem;
+    background-color: var(--color-bg-navabr);
+}
+.carousel-games__list{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 0.2rem;
+}
+.carousel-games__item{
+    position: relative;
+    overflow: hidden;
+
+}
+.carousel-games__img{
+    width: 100%;
+}
+.carousel-games__rating{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 4rem;
+    height: 4rem;
+}
+.carousel-games__info{
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    padding: 0 1rem;
+    transition: all 300ms ease-in-out;
+}
+.carousel-games__category{
+    display: block;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 3px var(--color-title);
+    color: var(--color-principal);
+    transition: all 300ms ease;
+}
+.carousel-games__category:hover{
+    color: var(--color-secundary);
+}
+.carousel-games__line{
+    height: 0.2rem;
+    width: 4rem;
+    margin: 0.4rem auto;
+    background-color: var(--color-secundary);
+}
+.carousel-games__title{
+    font-size: 1.8rem;
+    text-shadow: 1px 1px 3px var(--color-title);
+}
+.carousel-games__link{
+    color: var(--color-principal);
+    transition: all 300ms ease;
+}
+.carousel-games__title:hover .carousel-games__link{
+    color: var(--color-secundary);
 }
 
 /* ESTILOS CONTENIDO PRINCIPAL MAIN*/
 .layout__main{
     grid-area: main;
+    margin-right: 3rem;
+}
+    /*estilos para noticias*/
+.main__news{
+    width: 100%;
+}
+.news__main-post{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    padding-bottom: 0rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--color-bg-marquee);
+}
+.main-post__image{
+    position: relative;
+    overflow: hidden;
+    flex-basis: 50%;
+    height: 20rem;
+}
+.main-post__img{
+    width: 100%;
+    height: 100%;
+    transition: all 300ms ease;
+}
+.main-post__img:hover{
+    transform: scale(1.1);
+}
+.main-post__container-category{
+    position: absolute;
+    left: 0;
+    bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-secundary);
+    transition: all 300ms ease;
+}
+.main-post__container-category:hover{
+    background-color: var(--color-bg-navabr);
+}
+.main-post__category{
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--color-principal);
+}
+.main-post__info{
+    flex-basis: 50%;
+}
+.main-post__title{
+    font-size: 2rem;
+    text-transform: uppercase;/* ponene en maytuyscula las palabras*/
+    margin-bottom: 1rem;
+}
+.main-post__link-title{
+    color: var(--color-title);
+    transition: all 300ms ease;
+}
+.main-post__title:hover .main-post__link-title:hover{
+    color: var(--color-secundary);
+}
+    /* reulizacon de recursos*/
+    .main-post__meta,
+    .news__data{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+.main-post__description{
+    font-size: 1.3rem;
+    color: var(--color-title);
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+.main-post__footer-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.news__list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4rem;
+    margin-bottom: 6rem;
+}
+.news__post{/* usamos flex-basis para encuadrar la lista*/
+    flex-basis: calc(50% - 2rem);
+    display: flex;
+    gap: 1rem;
+}
+.news__image{
+    overflow: hidden;
+    width: 7.5rem;
+    height: 7.5rem;
+}
+.news__img{
+    width: 100%;
+    height: 100%;
+    transition: all 300ms ease-in-out;
+}
+.news__image:hover .news__img{
+    transform: scale(1.1);
+}
+.news__detail{
+    width: 75%;
+}
+.news__title-post{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.news__link-title{
+    color: var(--color-title);
+    transition: all 300ms ease-in-out;
+}
+.news__link-title:hover{
+    color: var(--color-secundary);
+}
+.news__data{
+    justify-content: left;
+    gap: 1rem;
+}
+    /* estilos de juegos*/
+.main__games{
+    width: 100%;
+    margin-bottom: 3rem;
+}
+.games__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:3rem;
+}
+.games__game{
+    position: relative;
+    flex-basis: calc(50% - 3rem); /* para hacer cuadricula*/
+}
+.game__container-image{
+    overflow: hidden;
+}
+.game__img{
+    width: 100%;
+    transition: all 300ms ease-in-out;
+}
+.game__img:hover{
+    transform: scale(1.1);
+}
+.game__rating{
+    height: 4rem;
+    width: 4rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    z-index: 9;
+}
+.game__detail{
+    min-height: 6rem;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    padding:0.5rem 1rem;
+    padding-right: 5rem;
+    background-color: rgba(0,0,0, 0.20);
+}
+.game__title{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.game__link-title{
+    color: var(--color-principal);
+    transition: all 300ms ease-in-out;
+}
+.game__title:hover .game__link-title{
+    text-shadow: 0 0 5px black;
+}
+    /*estilos de ultimos noticias*/
+.main__posts{
+    width: 100%;
+    margin-bottom: 3rem;
+}
+.posts__list-header{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+.list-header--small{
+    font-weight: 400;
+    color: white;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    padding: 0.5rem;
+    white-space: nowrap;
+}
+.posts__container{
+    flex-wrap: wrap;
+}
+.posts__post{
+    flex-basis: calc(50% - 2rem);
 }
 
 /* ESTILOS BARRA LATERAL PRINCIPAL ASIDE*/
 .layout__aside{
     grid-area: aside;
+    background-color: var(--color-bg-aside);
+    padding: 1.5rem;
+    height: fit-content; /* ajustamos a su contenido*/
+}
+    /* sector de formulario*/
+.login__container{
+    width: 100%;
+}
+.login__form{
+    width: 100%;
+}
+.form__input{
+    width: 100%;
+    border: 1px solid rgba(0,0,0, 0.10);
+    padding: 0.5rem;
+}
+.form__label{
+    font-weight: 600;
+}
+.form__container-username,
+.form__container-password,
+.form__container-remember{
+    width: 100%;
+    margin:  1rem 0;
+}
+.form__container-remember .form__input,
+.form__container-remember .form__label{
+    width: auto;
+    display: inline;
+}
+.form__submit{
+    width: 100%;
+    height: 3.7rem;
+    background-color: var(--color-secundary);
+    color: var(--color-principal);
+    border: 1px solid rgba(0,0,0, 0.10);
+    border-radius: 0.3rem;
+    padding: 0.7rem;
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+.login__resgiter,
+.login__lost-pass{
+    display: block;
+    color: var(--color-secundary);
+    font-weight: 500;
+}
+    /*sector de redes social*/
+.aside__social{
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
