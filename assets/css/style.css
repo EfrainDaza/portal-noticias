@@ -471,7 +471,6 @@ body{
     }
     .highlights__post,
     .posts__post{
-        flex-basis: 33%;
         height: 100%;
         border-bottom: 1px solid var(--color-bg-marquee);
     }
