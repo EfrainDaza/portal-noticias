@@ -1,0 +1,195 @@
+/* VARIABLES */
+:root{
+    --color-principal:#fff;
+    --color-secundary:#329153;
+    --color-bg-navabr:#333946;
+    --color-border-list: rgba(255,255,255, 0.3);
+    --color-hover-sublist-item: rgba(0,0,0, 0.2);
+    --color-shadow: rgba(0,0,0, 0.10);
+    --color-bg-marquee: #EEEEEE;
+    --color-text-marquee: #7c7c7c;
+    --color-title: #333333;
+    --color-bg-aside: #f5f5f5;
+    --color-twitter:#2fc3ef;
+    --color-facebook: #4c66a4;
+    --color-instagram: #ea4c89 ;
+    --color-youtube: #cc181e;
+    --color-linkedin: #f4a62a;
+    --color-footer: #222222;
+    --color-footer-down: #111111;
+
+}
+/* MENU RESPONSIVE */
+.navbar__mobile-btn{
+    display: none;
+}
+.navbar__mobile-list{
+    display: none;
+}
+
+@media ( max-width: 1024px){
+    /*LAYOUT*/
+    .layout{
+        width: 50%;
+        min-width: 74rem;
+        margin: 0 auto;
+        grid-template-areas: /* definimos la estructura de la maquetacion de HTML-vista*/
+        "header header"
+        "nav nav"
+        "marquee marquee"
+        "slider slider"
+        "high high"
+        "videos videos"
+        "carousel carousel"
+        "main main"
+        "aside aside"
+        ;
+    }
+    /*CABEZERA*/
+    .layout__header{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /*MENU*/
+    
+    .navbar__list{
+        display: none;
+    }
+    /*menu responsive*/
+    .navbar__mobile-btn{
+        display: flex;
+    }
+    .navbar__mobile-list{
+        display: none;
+
+        position: absolute;
+        padding: 1.5rem;
+        top: 98%;
+        width: 100%;
+        background-color: var(--color-bg-navabr);
+        z-index: 99;
+    }
+    .mobile-list__item{
+        width: 100%;
+        padding: 0.5rem 2rem;
+        border-bottom: 1px solid var(--color-border-list);
+    }
+    .mobile-list__container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .mobile-list__link{
+        display: block;
+        width: 85%;
+        font-weight: 400;
+        line-height: 3rem;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        color: var(--color-principal);
+    }
+    .mobile-lis__icon{
+        cursor: pointer;
+    }
+    .mobile-lis__icon .fa-solid{
+        color: var(--color-secundary);
+        font-size: 1.6rem;
+        font-weight: bold;
+    }
+    /*submenu responsive*/
+    .mobile-list__msubmenu{
+        display: none;
+    }
+    .msubmenu__item{
+        padding-left: 4rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+       
+    }
+    .msubmenu__link{
+        font-weight: 400;
+        font-size: 1.3rem;
+        line-height: 3rem;
+        color: var(--color-principal);
+        text-transform: uppercase;
+    }
+
+    /*SLIDER*/
+    .layout__slider{
+        grid-template-areas: "slider1 slider3 slider3 slider3"
+                             "slider2 slider3 slider3 slider3"
+                             "slider4 slider4 slider5 slider5";
+
+    }
+    .slider__container--slider2{
+        width: 100%;
+        height: 16.8rem;
+    }
+    .slider__container--slider3{
+        width: 100%;
+        height: 33.8rem;
+    }
+    .slider__container--slider5{
+        width: 100%;
+        height: 23.6rem;
+    }
+    /*MEJORES MOMENTOS*/
+    .highlights__posts{
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .highlights__post{
+       flex-basis: calc(50% - 3rem);
+    }
+    /*VIDEOS*/
+    .videos__container{
+        flex-direction: column;
+        gap:0;
+    }
+    .videos__list{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap:2rem;
+        flex-wrap: wrap;
+    }
+    .videos__video{
+        width: calc(50% - 1rem);
+    }
+
+    /*CARROUSEL*/
+    .carousel-games__item{
+        width: 100%;
+    }
+    .carousel-games__item--hidden{
+        display: none;
+    }
+
+    /*BARRA LATERAL*/
+    .layout__aside{
+        margin-bottom: 3rem;
+    }
+
+    /*PIE DE PAGINA*/
+    .footer__container{
+        width: 70%;
+        min-width: 70rem;
+        flex-direction: column;
+    }
+    .footer__left-container,
+    .footer__center-conatiner,
+    .footer__right-container{
+        width: 100%;
+    }
+    .footer__fslider{
+        width: auto;
+        height: auto;
+    }
+    .footer__text{
+        text-align: center;
+        margin: 0;
+    }
+}
